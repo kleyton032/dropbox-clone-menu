@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FaDropbox } from 'react-icons/fa'
 
 export const Container = styled.div`
     --padding-top: 100px;
@@ -36,16 +37,65 @@ export const Container = styled.div`
       }
 
     background: var(--bg-color);
+    position: relative;
 `;
 
 export const HeaderWrapper = styled.div`
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    clip: rect(auto auto auto auto)
 `;
 
+export const Header = styled.header`
+    z-index: 3;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    
+    > h1 {
+    display: flex;
+    align-items: center;
+    
+    > span {
+        color: var(--text-color);
+        margin-left: 10px;
+        font-size: 29px;
+        }
+    }
+    
+    > button {
+    color: var(--text-color);
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        }
+    }
 
-export const Header = styled.div`
-`; 
-export const DropboxLogo = styled.div`
-`; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+`;
+
+export const DropboxLogo = styled(FaDropbox)`
+    width: 36px;
+    height: 32px;
+    fill: var(--logo-color);
+`;
 
 
 export const Content = styled.div`
@@ -54,15 +104,15 @@ export const Content = styled.div`
     max-width: 1440px;
     margin: 0 auto;
     > h2 {
-        font-size: var(--heading-font-size);
-        color: var(--logo-color);
-        max-width: var(--content-width);
+    font-size: var(--heading-font-size);
+    color: var(--logo-color);
+    max-width: var(--content-width);
     }
     > p {
-        margin-top: 20px;
-        font-size: 16px;
-        color: var(--text-color);
-        max-width: var(--content-width);
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+    max-width: var(--content-width);
     }
-  
+    padding: var(--padding-top) 32px var(--padding-bottom);
 `;
