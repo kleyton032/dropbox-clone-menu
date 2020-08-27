@@ -26,15 +26,43 @@ export const Container = styled.div`
     --logo-color: var(--color-blue);
     }
 
-    :first-child {
+    &:first-child {
         --padding-top: 130px;
-    }
+        --heading-font-size: 51px;
+        @media (min-width: 1024px) {
+          --heading-font-size: 71px;
+          --content-width: 50%;
+        }
+      }
+
+    background: var(--bg-color);
+`;
+
+export const HeaderWrapper = styled.div`
 `;
 
 
+export const Header = styled.div`
+`; 
+export const DropboxLogo = styled.div`
+`; 
+
+
 export const Content = styled.div`
-
-
-
+    z-index: 2;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    > h2 {
+        font-size: var(--heading-font-size);
+        color: var(--logo-color);
+        max-width: var(--content-width);
+    }
+    > p {
+        margin-top: 20px;
+        font-size: 16px;
+        color: var(--text-color);
+        max-width: var(--content-width);
+    }
   
 `;

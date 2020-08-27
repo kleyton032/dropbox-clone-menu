@@ -12,7 +12,7 @@ function App() {
       description={data[0].description}
       />
        <Section 
-      variant="blue"
+      variant="beige"
       title={data[1].title}
       description={data[1].description}
       />
@@ -22,12 +22,12 @@ function App() {
       description={data[2].description}
       />
        <Section 
-      variant="blue"
+      variant="white"
       title={data[3].title}
       description={data[3].description}
       />
        <Section 
-      variant="blue"
+      variant="black"
       title={data[4].title}
       description={data[4].description}
       />
